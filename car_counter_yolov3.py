@@ -47,7 +47,7 @@ print("[INFO] path to cfg: ", args["yolo"] + "/yolo-obj.cfg")
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
- 
+
 # путь к исходному видео
 print("[INFO] input directory: ", args["input"])
 
