@@ -15,6 +15,7 @@ import argparse
 import imutils
 import dlib
 import cv2
+import os
 from matplotlib import pyplot as plt
 
 # парсер аргументов с командной строки
@@ -33,7 +34,6 @@ ap.add_argument("-s", "--skip-frames", type=int, default=10,
 args = vars(ap.parse_args())
 
 
-
 # классы объектов, которые могут быть распознаны алгоритмом
 with open(args["yolo"] + "/classes.names", 'r') as f:
 	CLASSES = [line.strip() for line in f.readlines()]
@@ -42,12 +42,12 @@ with open(args["yolo"] + "/classes.names", 'r') as f:
 # Настройка yolov3
 print("[INFO] loading model...")
 net = cv2.dnn.readNet(args["yolo"] + "/yolo-obj_9000.weights", args["yolo"] + "/yolo-obj.cfg")
-print("path to weights: ", args["yolo"] + "/yolo-obj_9000.weights")
-print("path to cfg: ", args["yolo"] + "/yolo-obj.cfg")
+print("[INFO] path to weights: ", args["yolo"] + "/yolo-obj_9000.weights")
+print("[INFO] path to cfg: ", args["yolo"] + "/yolo-obj.cfg")
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
-
+ 
 # путь к исходному видео
 print("[INFO] input directory: ", args["input"])
 
@@ -57,7 +57,13 @@ vs = cv2.VideoCapture(args["input"])
 
 # объявляем инструмент для записи конечного видео в файл, указываем путь
 writer = None
-writer_path = args["output"] + "\last.avi"
+i = 1
+while True:
+	if "{}_proccesed.avi".format(i) not in os.listdir(args["output"]):
+		writer_path = args["output"] + "/{}_proccesed.avi".format(i)
+		break
+	else:
+		i += 1
 print("[INFO] output directory: ", writer_path)
 
 # инициализируем размеры кадра как пустые значения
