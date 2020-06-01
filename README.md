@@ -19,7 +19,7 @@ But, to be honest, `.weights` file that I got in the end is pretty wack and work
 The proccessed video will be saved to the `output/` folder
 
 The second one uses pretrained `.weights` file from [this site](https://pjreddie.com/darknet/yolo/). So I didn't need to train YOLOv3 myself once again. This program can:
-- detect and track all of 80 COCO classes
+- detect and track objects of all of 80 COCO classes
 - count objects of each of 6 classes:
     - car
     - truck
