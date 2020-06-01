@@ -7,6 +7,7 @@ The first one is a lighter version of the second. Basically, I`ve trained YOLOv3
 - SUV
 - hatchback
 - universal
+
 But, to be honest, `.weights` file that I got in the end is pretty wack and works not that good on different videos. But it's still here.
 ### How to run it
 - Download `.weights` file for YOLO [here](https://yadi.sk/d/rrlsHZFHyPmnCA)
