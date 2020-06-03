@@ -32,7 +32,7 @@ The second one uses pretrained `.weights` file from [this site](https://pjreddie
 - put the results into `.json` file
 
   
-  ### How to run it
+### How to run it
 - Download `YOLOv3-608.weights` file for YOLO [here](https://pjreddie.com/darknet/yolo/)
 - Download any test-video with cars driving around and put it to `videos/` folder (or use any of those that are already there)
 - Move `.weights` file to `yolo/` folder
