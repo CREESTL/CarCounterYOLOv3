@@ -1,3 +1,5 @@
+## [UPDATE 2023: This repo is not maintained. The code might not work. No issues will be resolved] 
+
 # Quick Overview
 In this repository you can see 2 main programs: `car_counter_yolov3_custom_classes.py` and `car_counter_yolov3_COCO_6_classes.py`
 
