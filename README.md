@@ -12,7 +12,7 @@ The first one is a lighter version of the second. Basically, I`ve trained YOLOv3
 
 But, to be honest, `.weights` file that I got in the end is pretty wack and works not that good on different videos. But it's still here.
 ### How to run it
-- Download `.weights` file for YOLO [here](https://yadi.sk/d/rrlsHZFHyPmnCA)
+- Download `yolo-obj_final.weights` file for YOLO [here](https://disk.yandex.ru/d/EW4HwokvFbLmAg)
 - Download any test-video with cars driving around and put it to `videos/` folder (or use any of those that are already there)
 - Move `.weights` file to `yolo/` folder
 - Go to the project's repository via command line
